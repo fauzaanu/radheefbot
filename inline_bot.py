@@ -13,7 +13,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-GH_LINK = "null"
+GH_LINK = "https://github.com/fauzaanu/radheefbot"
 
 
 async def start_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
