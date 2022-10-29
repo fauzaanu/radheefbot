@@ -51,7 +51,7 @@ async def inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
                 results.append(
                     InlineQueryResultArticle(
                         id=uuid4(),
-                        title=y,
+                        title=y['meaning_text'],
                         input_message_content=InputTextMessageContent(
                             f"{y['meaning_text']}\n{y['extra_notes_dv']}", parse_mode=ParseMode.HTML
                         ),
