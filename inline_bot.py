@@ -77,9 +77,10 @@ def main() -> None:
 
     application = Application.builder().token("").build()
 
+    application.add_handler(CommandHandler("start", callback=start_handle))
     application.add_handler(MessageHandler(filters.TEXT, callback=direct_message))
     application.add_handler(InlineQueryHandler(inline_query))
-    application.add_handler(CommandHandler("start", callback=start_handle))
+
 
     application.run_polling()
 
