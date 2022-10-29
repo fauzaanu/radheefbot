@@ -31,7 +31,7 @@ async def direct_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         await update.message.reply_text("No exact match found! Please try again.")
         await update.message.reply_text("If you think this is an error and the word is available via "
                                         "https://www.radheef.mv/ please report to @fauzaanu")
-        await update.message.reply_text(f"If you would like to contribute, please open a PR on {GH_LINK}")
+        await update.message.reply_text(f"If you would like to contribute, please open a PR on {GH_LINK}",disable_web_page_preview=True)
 
 
 async def inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -66,7 +66,7 @@ async def inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
                         "No exact match found! Please try again. If you think this is an error and the word is "
                         "available via https://www.radheef.mv/ please report to @fauzaanu"
                         f"If you would like to contribute, please open a PR on {GH_LINK}", parse_mode=ParseMode.MARKDOWN
-                    ),
+                    ,disable_web_page_preview=True),
                 )
             )
 
