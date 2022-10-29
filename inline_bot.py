@@ -26,8 +26,7 @@ async def direct_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
     if x is not None:
         for y in x:
-            await update.message.reply_text(y["meaning_text"])
-            await update.message.reply_text(y["extra_notes_dv"])
+            await update.message.reply_text(f'{y["meaning_text"]}\n{y["extra_notes_dv"]}')
     else:
         await update.message.reply_text("No exact match found! Please try again.")
         await update.message.reply_text("If you think this is an error and the word is available via "
@@ -54,7 +53,7 @@ async def inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
                         id=uuid4(),
                         title=y,
                         input_message_content=InputTextMessageContent(
-                            f"{y['meaning_text']}<br>{y['extra_notes_dv']}", parse_mode=ParseMode.HTML
+                            f"{y['meaning_text']}\n{y['extra_notes_dv']}", parse_mode=ParseMode.HTML
                         ),
                     )
                 )
