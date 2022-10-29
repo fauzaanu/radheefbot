@@ -19,7 +19,7 @@ GH_LINK = "https://github.com/fauzaanu/radheefbot"
 async def start_handle(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Hello! I am a bot that helps you find the meaning of words in Dhivehi. "
                                     "I am currently in alpha and I am still under development. "
-                                    f"If you would like to contribute, please open a PR on {GH_LINK}")
+                                    f"If you would like to contribute, please open a PR on {GH_LINK}",disable_web_page_preview=True)
 
 async def direct_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     x = get_radheef_val(update.message.text)
