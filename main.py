@@ -17,7 +17,7 @@ def get_radheef_val(word):
     response = requests.request("POST", url, data=payload, headers=headers)
 
     if response.json()['data']:
-        return [resp["meaning_text"] for resp in response.json()['data']]
+        return [resp for resp in response.json()['data']]
     else:
         return None
 
