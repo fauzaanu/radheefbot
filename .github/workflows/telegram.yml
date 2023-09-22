@@ -1,4 +1,4 @@
-name: Telegram Bot CI/CD
+name: RADHEEFBOT
 
 on:
   push:
