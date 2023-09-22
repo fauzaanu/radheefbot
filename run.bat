@@ -1,0 +1,1 @@
+C:\Users\fauzaanu\radheefbot\venv\Scripts\python.exe C:/Users/fauzaanu/radheefbot/inline_bot.py
