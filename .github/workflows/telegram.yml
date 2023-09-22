@@ -22,11 +22,13 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    - name: Create .env file
+      run: |
+        echo "TOKEN=${{ secrets.TOKEN }}" >> .env
+
     - name: Run and Kill
       run: |
         python inline_bot.py &
         sleep 10
         kill $!
-      env:
-        TOKEN: ${{ secrets.TOKEN }}
 
