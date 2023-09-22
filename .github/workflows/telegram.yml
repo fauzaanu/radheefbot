@@ -24,7 +24,7 @@ jobs:
 
     - name: Run and Kill
       run: |
-        python main.py &
+        python inline_bot.py &
         sleep 10
         kill $!
 
