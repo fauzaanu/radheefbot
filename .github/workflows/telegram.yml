@@ -27,4 +27,6 @@ jobs:
         python inline_bot.py &
         sleep 10
         kill $!
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
 
